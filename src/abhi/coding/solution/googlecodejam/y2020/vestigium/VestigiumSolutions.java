@@ -18,7 +18,6 @@ public class VestigiumSolutions {
                     a[i][j]=s.nextInt();
                 }
             }
-            System.out.println();
             Result r=vestigiumSolutions.cal(a);
             System.out.println(String.format("Case #%d: %d %d %d",caseNum,r.diagonalSum,r.dupRowCount,r.dupColCount));
             caseNum++;
