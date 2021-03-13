@@ -19,13 +19,9 @@ public class VestigiumSolutions {
                 }
             }
             System.out.println();
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    System.out.print(a[i][j]+" ");
-                }
-                System.out. println();
-            }
-            vestigiumSolutions.cal(a);
+            Result r=vestigiumSolutions.cal(a);
+            System.out.println(String.format("Case #%d: %d %d %d",caseNum,r.diagonalSum,r.dupRowCount,r.dupColCount));
+            caseNum++;
         }
     }
     private Result cal(int[][] a){
@@ -38,10 +34,29 @@ public class VestigiumSolutions {
         for (int i = 0; i < row; i++) {
             colList.add(new HashSet<Integer>());
         }
+        Set<Integer> rowset=new HashSet<>();
+        int diagonalSum=0;
+        int dupRow=0;
+        int dupCol=0;
         for (int i = 0; i < row; i++) {
-            System.out.println(colList.get(i));
+            for (int j = 0; j < col; j++) {
+                if (i==j){
+                    diagonalSum +=a[i][j];
+                }
+                rowset.add(a[i][j]);
+                colList.get(j).add(a[i][j]);
+            }
+            if (rowset.size()!=row){
+                dupRow++;
+            }
+            rowset.clear();
         }
-        return new Result(0,0,0);
+        for (Set<Integer> s:colList){
+            if (s.size()!=row){
+                dupCol++;
+            }
+        }
+        return new Result(diagonalSum,dupRow,dupCol);
     }
     private class Result{
         int diagonalSum=0;
