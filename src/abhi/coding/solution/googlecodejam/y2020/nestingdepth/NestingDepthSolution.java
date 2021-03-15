@@ -51,25 +51,3 @@ public class NestingDepthSolution {
         }
 
 }
-/*
-    char[] input=sequenceNumber.toCharArray();
-    StringBuilder output=new StringBuilder();
-    //System.out.println(String.format("The test case %d",caseNum));
-    int depth=0;
-            for (int i = 0; i < input.length; i++) {
-        int digit=input[i]-'0';
-        //System.out.println(Math.max(0,digit-depth));
-
-        for (int j = 0; j < Math.max(0,digit-depth); j++) {
-        output.append("(");
-        }
-        for (int j = 0; j <Math.max(0,depth-digit) ; j++) {
-        output.append(")");
-        }
-        output.append(digit);
-        depth=digit;
-        }
-        for (int i = 0; i <depth ; i++) {
-        output.append(")");
-        }
-*/
