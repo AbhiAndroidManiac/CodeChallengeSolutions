@@ -1,9 +1,14 @@
 package abhi.coding.solution.LeetCode.ProblemStatement3;
-
+//Leetcode problem statement 3
+//Given a string s, find the length of the longest substring without repeating characters.
 public class WindowSlidingSolution {
-    //timecomplexity for this technique is O(n^2)
+    //timecomplexity for this technique is  O(n)
+    // the window sliding technique. Whenever we see repetition, we remove the window till the repeated string.
+    //Auxiliary Space: O(1)
+
+
     public static void main(String[] args) {
-        String str = "geeksforgeeks";
+        String str = "abcabcbb";
         System.out.println("The input string is " + str);
         System.out.println("The length of the longest "
                 + "non-repeating character "
