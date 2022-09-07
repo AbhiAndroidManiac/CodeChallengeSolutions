@@ -22,11 +22,10 @@ public class WindowSlidingSolution {
         for (char c: str.toCharArray()){
             String current=String.valueOf(c);
             if (text.contains(current)){
+                //get the index of the already existing character and create a substring after that element
                 text=text.substring(text.indexOf(current)+1);
-                String something=text;
             }
             text=text+String.valueOf(c);
-            String some=text;
             maxLength=Math.max(text.length(),maxLength);
         }
         return maxLength;
