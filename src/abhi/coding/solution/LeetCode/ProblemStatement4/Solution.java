@@ -22,7 +22,11 @@ public class Solution {
 
         if ((m+n)/2==1){
             //odd size condition
-
+            for (count=0; count<=(n+m)/2;i++){
+                if (i!=n && j!=m){
+                    m1=(A[i]>B[j])?B[j++] : A[i++];
+                }
+            }
         } else {
             //even size condition
 
