@@ -37,6 +37,8 @@ public class CountAllFactorsSolution {
         CountAllFactorsSolution countAllFactorsSolution=new CountAllFactorsSolution();
         for (int i = 0; i <q ; i++) {
             System.out.println(countAllFactorsSolution.getTheFactors(queryArray[i]));
+            LinkedList<Integer> factorList=countAllFactorsSolution.getTheFactors(queryArray[i]);
+
         }
 
     }
