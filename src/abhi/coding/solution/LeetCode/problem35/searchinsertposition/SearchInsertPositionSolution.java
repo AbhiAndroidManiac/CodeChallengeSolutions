@@ -36,8 +36,15 @@ public class SearchInsertPositionSolution {
         System.out.println("The output :- " + solution.searchInsert(nums, target));
     }
 
-
+    //log[n] complexity approach
     //using while loop with log(n) complexity
+    //a0 .....a1 a2 a3 a4 a5 a6 a7 a8 ......a9 ....................an
+    //start                           //mid                           //end
+    //target > a[mid]
+    //!....bifurcated array..........!      start           mid           //end
+    //target <a[mid]
+    //start        //mid            end !....bifurcated array..........!
+    //so on and so fourth
     public int searchInsert(int[] nums,int target){
         if (target<nums[0]){
             return 0;
