@@ -36,7 +36,7 @@ public class SearchInsertPositionSolution {
         System.out.println("The output :- " + solution.searchInsert(nums, target));
     }
 
-    //log[n] complexity approach
+    //log[n] complexity approach like binary search
     //using while loop with log(n) complexity
     //a0 .....a1 a2 a3 a4 a5 a6 a7 a8 ......a9 ....................an
     //start                           //mid                           //end

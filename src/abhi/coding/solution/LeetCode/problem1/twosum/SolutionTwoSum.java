@@ -16,17 +16,22 @@ package abhi.coding.solution.LeetCode.problem1.twosum;
 
 import abhi.coding.solution.LeetCode.ProblemStatement3.Solution;
 
+import java.util.HashMap;
+
 //Example Input: nums = [3,3], target = 6
 //Output: [0,1]
 public class SolutionTwoSum {
     public static void main(String[] args) {
-        System.out.println("Hello world");
+
         SolutionTwoSum solutionTwoSum=new SolutionTwoSum();
         int[] nums={2,7,11,15};
         System.out.println(solutionTwoSum.twoSum(nums,9)[0]+" "+solutionTwoSum.twoSum(nums,9)[1]);
     }
-    public int[] twoSum(int[] nums, int target){
+    //accepted with 63 ms
+   /* public int[] twoSum(int[] nums, int target){
         int[] result = new int[0];
+
+        //double for loop makes the current time complexity n^2
         for (int i = 0; i < nums.length ; i++) {
             int sumcheck=0;
             for (int j = i+1; j < nums.length ; j++) {
@@ -34,9 +39,22 @@ public class SolutionTwoSum {
                 if (sumcheck==target){
                     result= new int[]{i, j};
                 }
-
             }
-
+        }
+        return result;
+    }*/
+    //accepted with 2ms
+    public  int[] twoSum(int[] nums,int target){
+        HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
+        int[] result = new int[0];
+        for (int i = 0; i <nums.length ; i++) {
+            int find=target-nums[i];
+            if (map.containsKey(find)){
+                result = new int[]{map.get(find),i};
+                return result;
+                //break;
+            }
+            map.put(nums[i],i);
         }
         return result;
     }
