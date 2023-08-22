@@ -12,9 +12,9 @@ public class MaxMinSumProd {
             // For loop for end index
             for (int j = i; j < a.length; j++) {
                 // For loop to print subarray elements
-                ArrayList<Integer> b  = new ArrayList<>();
+                //ArrayList<Integer> b  = new ArrayList<>();
                 for (int k = i; k <=j; k++) {
-                    b.add(a[k]);
+                    //b.add(a[k]);
                     System.out.print(a[k] + " ");
                 }
                 System.out.println();
