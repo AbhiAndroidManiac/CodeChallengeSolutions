@@ -5,6 +5,62 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.*;
+/*You are given two strings
+        and
+        of length
+        and
+        respectively consisting of lowercase English letters. You can make several strings using characters from
+        . If you use any character of
+        to make the string, that character will be removed from
+        .
+
+        That means if you select an integer
+        from
+        to the length of the string
+        and use
+        , then the character
+        will be removed and the string length gets reduced by
+        , the indices of characters to the right of the deleted one also get reduced by
+        .
+
+        Find the maximum number of strings you can make the same as that of
+        .
+
+        Input format
+
+        The first line contains an integer
+        denoting the number of test cases.
+        The first line of each test case contains two space-separated integers
+        and
+        .
+        The second line of each test case contains the string
+        .
+        The third line of each test case contains the string
+        .
+        Output format
+
+        For each test case, print the maximum number of strings you can make the same as that of
+        .
+
+        Constraints
+        2
+        4 3
+        hgeb
+        ebh
+        7 3
+        xyzxyxx
+        xyx
+
+        solution
+        1
+        2
+        Explanation
+For test case
+: The first string uses characters at indexes 1, 3, and 4 (1-based indexing). Hence, the answer is 1.
+
+For test case
+: The first string uses characters at indexes 1, 2, and 4 (1-based indexing). The second string uses characters at indexes 5, 6, and 7 (1-based indexing). Hence, the answer is 2.*/
+
 
 public class BFromA {
     public static void main(String args[] ) throws Exception {
