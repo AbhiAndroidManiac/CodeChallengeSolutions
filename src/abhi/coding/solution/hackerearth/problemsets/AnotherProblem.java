@@ -12,7 +12,9 @@ public class AnotherProblem {
         chunks.add("urcekaruya");
         chunks.add("ruyadsa");
         System.out.println("opensourcekaruyadsa");
-        List<String> resultSaver = new ArrayList<>();
+        String somevalue  = "267573393481";
+        System.out.println("The length of value"+somevalue.length());
+        /*List<String> resultSaver = new ArrayList<>();
         StringBuilder input = new StringBuilder();
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < chunks.size() ; i++) {
@@ -38,7 +40,7 @@ public class AnotherProblem {
 
         }
         System.out.println("The length of string" + input.length());
-        System.out.println(result+" "+result.length());
+        System.out.println(result+" "+result.length());*/
     }
     public static boolean contains(StringBuilder sb, String findString){
 
