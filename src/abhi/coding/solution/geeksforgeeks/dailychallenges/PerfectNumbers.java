@@ -37,6 +37,21 @@ public class PerfectNumbers {
     static int isPerfectNumber(long N) {
         long num = N;
         LinkedList<Long> list = new LinkedList<>();
+
+/*
+        1    2    4    5    10    20    25    50    100
+   │    │    │    │    |      │     │     │     │
+   │    │    │    │  [10,10]  │     │     │     │
+   │    │    │    │           │     │     │     │
+   │    │    │    └──[5, 20] ─┘     │     │     │
+   │    │    │                      │     │     │
+   │    │    └───────[4, 25]────────┘     │     │
+   │    │                                 │     │
+   │    └────────────[2, 50]──────────────┘     │
+   │                                            │
+   └─────────────────[1, 100]───────────────────┘
+*/
+
         for (long i = 1; i < Math.sqrt(num) ; i++) {
             if (num%i==0 && num != i){
                 list.add(i);
