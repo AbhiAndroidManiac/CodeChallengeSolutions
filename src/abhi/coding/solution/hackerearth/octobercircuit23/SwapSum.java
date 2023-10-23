@@ -36,7 +36,7 @@ public class SwapSum {
             } else sum+= Integer.valueOf(listA.get(i));
         }
         Collections.sort(sumOp,new ValueComparator());
-        List<ResultCal> finalList=sumOp.subList(0,K-1);
+        List<ResultCal> finalList=sumOp.subList(0,K);
 
         for (int i = 0; i <sumOp.size() ; i++) {
             System.out.print(sumOp.get(i).position+" "+sumOp.get(i).diff);
@@ -44,6 +44,9 @@ public class SwapSum {
         }
         System.out.println("The sublist is");
         for (int i = 0; i <finalList.size() ; i++) {
+            if (i<K){
+                sum+=Integer.valueOf(listB.get(sumOp.get(i).position));
+            } else sum+=Integer.valueOf(listA.get(sumOp.get(i).position));
             System.out.print(finalList.get(i).position+" "+finalList.get(i).diff);
             System.out.println();
         }
