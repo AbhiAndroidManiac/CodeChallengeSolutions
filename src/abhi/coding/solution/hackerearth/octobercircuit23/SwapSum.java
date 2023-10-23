@@ -21,12 +21,10 @@ public class SwapSum {
             System.out.println("The test cases is "+testCases);
             System.out.println("size of array is "+N);
             System.out.println("Number of operations allowed "+K);
-            findMaxSum(listA,listB,N);
+            findMaxSum(listA,listB,N,K);
         }
     }
-    private static void findMaxSum(List<String> listA,List<String> listB,int N){
-        //System.out.println(listA);
-        //System.out.println(listB);
+    private static void findMaxSum(List<String> listA,List<String> listB,int N,int K){
         int sum = 0;
         List<ResultCal> sumOp=new LinkedList<>();
         for (int i = 0; i < N; i++) {
@@ -38,10 +36,18 @@ public class SwapSum {
             } else sum+= Integer.valueOf(listA.get(i));
         }
         Collections.sort(sumOp,new ValueComparator());
+        List<ResultCal> finalList=sumOp.subList(0,K-1);
+
         for (int i = 0; i <sumOp.size() ; i++) {
             System.out.print(sumOp.get(i).position+" "+sumOp.get(i).diff);
             System.out.println();
         }
+        System.out.println("The sublist is");
+        for (int i = 0; i <finalList.size() ; i++) {
+            System.out.print(finalList.get(i).position+" "+finalList.get(i).diff);
+            System.out.println();
+        }
+
         System.out.println("The sume value so far is"+sum);
     }
     public static class ResultCal{
