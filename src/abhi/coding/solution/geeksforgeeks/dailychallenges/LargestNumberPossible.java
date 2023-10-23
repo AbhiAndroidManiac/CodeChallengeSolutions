@@ -63,7 +63,6 @@ public class LargestNumberPossible {
                 result+=String.join("", Collections.nCopies(N-i-1,"0"));
                 break;
             }
-
         }
         return result;
     }
