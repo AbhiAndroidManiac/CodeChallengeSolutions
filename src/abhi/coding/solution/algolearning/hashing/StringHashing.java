@@ -12,20 +12,20 @@ public class StringHashing {
 
         // Comparing for String 1 < String 2
         System.out.println("Comparing " + string1 + " and " + string2
-                + " : " + ConventionalstringCompare(string1, string2));
+                + " : " + conventionalStringCompare(string1, string2));
 
         // Comparing for String 3 = String 4
         System.out.println("Comparing " + string3 + " and " + string4
-                + " : " + ConventionalstringCompare(string3, string4));
+                + " : " + conventionalStringCompare(string3, string4));
 
 
         // Comparing for String 1 > String 4
         System.out.println("Comparing " + string1 + " and " + string4
-                + " : " + ConventionalstringCompare(string1, string4));
+                + " : " + conventionalStringCompare(string1, string4));
     }
     //conventional method of the string comparison using the lexicographically technique
     // with the time complexity of the O(min(str1.length,str2.length)
-    public static int ConventionalstringCompare(String str1,String str2){
+    public static int conventionalStringCompare(String str1,String str2){
         int l1=str1.length();
         int l2=str2.length();
         int lmin=Math.min(l1,l2);
