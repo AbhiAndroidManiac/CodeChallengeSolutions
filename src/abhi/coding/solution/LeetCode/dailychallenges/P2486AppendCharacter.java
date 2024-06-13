@@ -33,38 +33,19 @@ public class P2486AppendCharacter {
         String t = "abcde";
 /*        String s1 = "Somebody is a good coder";
         String s2 = "yia";*/
-        int result = minAppendsToMakeSubsequence(s,t);
-        System.out.println(result);
+        //int result = minAppendsToMakeSubsequence(s,t);
+        //System.out.println(result);
+       // System.out.println("The result is"+minAppendMS("Abhishek is a good developer","ksa"));
     }
-   /* public static void minFindMinimumString(String s1,String s2){
-        int result = 0;
-        int weight = 0;
-        ArrayList<String> tempvalue = new ArrayList<>();
-        IntStream.range(0,s1.length()).forEach(indexs1->{
-            char s1Char=s1.charAt(indexs1);
-            System.out.println(s1Char+"  at position"+indexs1);
-            LinkedHashMap<Character,Integer> weightValue = new LinkedHashMap<>();
-            IntStream.range(0,s2.length()).forEach(indexs2->{
-                if (s1Char==s2.charAt(indexs2)){
-                    weightValue.put(s1Char,indexs1);
-                }
-            });
-            if (weightValue.size()==s2.length()){
-                int tempWeight = 0;
-                ArrayList<Integer> valueList = new ArrayList<>(weightValue.values());
-                for (int i = 0; i <valueList.size() ; i++) {
-                    if (i!=0){
-                        tempWeight=weightValue.get(i)+weightValue.get(i-1);
-                    }
-                }
-                tempvalue.get(tempWeight);
-                StringBuffer tempString = new StringBuffer();
-                for (int i = 0; i < tempvalue.length(); i++) {
-                    tempString.append(tempString);
-                }
+    /*public static  String minAppendMS(String s, String t){
+        int i = 0, j = 0;
+        while (i<s.length() && j<t.length()){
+            if (s.charAt(i)==t.charAt(j)){
+                j++;
             }
-        });
-
+            i++;
+        }
+        return s.substring(t.length()-j,j);
     }*/
     //Greedy two pointer approach
     public static int minAppendsToMakeSubsequence(String s, String t){
